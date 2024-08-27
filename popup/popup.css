@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+    min-width: 400px;
+    background-color: #A8F552;
+  }
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  p {
+    font-weight: bold;
+    margin-top: 0;
+    color: #333;
+    
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  input[type="textarea"] {
+    min-height: 50px;
+  }
+  label {
+    margin-right: 20px;
+  }
+  #status {
+    font-size: 16px;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  br {
+    display: block;
+    margin: 10px 0;
+  }
+  

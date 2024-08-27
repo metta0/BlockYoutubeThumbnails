@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Block Youtube Thumbnail",
+    "description": "Blokcing youtube Thumbnails which distract our attention",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "images/icon.png"
+    },
+    "permissions": [
+    "storage" 
+    ],
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+         "*://*.youtube.com/*"
+      ]
+    }
+  ]
+  }
