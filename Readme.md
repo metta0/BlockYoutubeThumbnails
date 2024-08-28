@@ -104,7 +104,7 @@ thumbnail.style.setAttribute('thumbnail-block', 'true');
 ```
 위와 같이 하고 있었다.
 
-문제는 <U>**스타일을 적용하는 인터페이스에 대고 속성값을 부여하고 있었다.**</U>
+문제는 <U> **스타일을 적용하는 인터페이스에 대고 속성값을 부여하고 있었다.** </U>
 
 -'style[thumbnail-block="true"]' 에서의 style은 \<style> 이라는 태그를 의미  
 -thumbnail.style 이라는 style 객체는 HTML요소에 직접 스타일을 적용하는 인터페이스였다.  
