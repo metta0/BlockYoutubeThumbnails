@@ -1,4 +1,19 @@
-chrome.storage.onChanged.addListener(() => {
+//옵션 변경 시 업데이트
+chrome.storage.onChanged.addListener(updateElem);
+//페이지 로드시 업데이트
+updateElem();
+
+//페이지 변경 시 업데이트
+/* let lastPathname = window.location.pathname;
+setInterval(() => {
+  if (lastPathname !== window.location.pathname) {
+    lastPathname = window.location.pathname
+    updateElem();
+  }
+}, 200);
+ */
+
+function updateElem(){
     chrome.storage.sync.get(['thumbnailMode', 'exceptCharacter', 'exceptChannel'], function (items) {
         console.log(items.thumbnailMode)
         if (items.thumbnailMode) {
@@ -22,7 +37,7 @@ chrome.storage.onChanged.addListener(() => {
             }
         }
     });
-});
+}
 
 function hideThumbnail() {
     const style = document.createElement('style');
@@ -32,14 +47,14 @@ function hideThumbnail() {
     display: none !important;
   }
 `;
-    style.setAttribute('blokc-thumbnail-style', 'true');
+    style.setAttribute('block-thumbnail-style', 'true');
     style.appendChild(document.createTextNode(css));
     document.head.appendChild(style);
 }
 
 function showAllThumbnail() {
     console.log("showAllThumbnail");
-    const styles = document.querySelectorAll('style[blokc-thumbnail-style="true"]');
+    const styles = document.querySelectorAll('style[block-thumbnail-style="true"]');
     styles.forEach(style => {
         document.head.removeChild(style);
     });
@@ -56,7 +71,7 @@ function hideSpecificThumbnail(){
     });
 }
 
-
+//Hidden시 검색어로 예외처리된 썸네일들 다시 보이기
 function showSpecificThumbnail(keyword, option) {
     
     hideSpecificThumbnail();
