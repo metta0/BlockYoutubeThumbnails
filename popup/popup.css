@@ -1,9 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    
-    min-width: 400px;
-    background-color: #A8F552;
+    min-width: 330px;
+    background-color: #5a2828;
   }
   form {
     max-width: 600px;
@@ -31,7 +30,7 @@ body {
   }
   #status {
     font-size: 16px;
-    color: #4CAF50;
+    color: #0e140e;
     font-weight: bold;
   }
   br {

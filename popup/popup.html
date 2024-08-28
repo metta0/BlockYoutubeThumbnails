@@ -8,28 +8,31 @@
 
   <body>
     <form>
-      <p data-i18n="options_thumbnail_mode">Thumbnail display mode</p>
+      <p data-i18n="options_thumbnail_mode">A.Thumbnail display mode</p>
       <input type="radio" name="thumbnailMode" id="hidden" value="hidden">
       <label for="hidden" data-i18n="options_thumbnail_hidden">Hidden</label><br />
       <input type="radio" name="thumbnailMode" id="normal" value="normal">
       <label for="normal" data-i18n="options_thumbnail_normal">Normal</label><br />
+      <hr>
       <br />
       
       
-      <p data-i18n="options_except_character">Except characters: </p>
+      <p data-i18n="options_except_character">B.Except characters: </p>
       <textarea name="exceptCharacter" id="exceptCharacter"
       placeholder="ex. health, exercise, meditation, ..."></textarea><br />
       <label for="exceptCharacter" data-i18n="options_except_character">(Enter characters separated by ',' separators \)</label>
       <br />
+      <hr>
       <br />
 
-      <p data-i18n="options_except_channel">Except channels: </p>
+      <p data-i18n="options_except_channel">C.Except channels: </p>
       <textarea name="exceptChannel" id="exceptChannel"
       placeholder="ex. CNN, BBCNews, ..."></textarea><br />
       <label for="exceptChannel" data-i18n="options_except_channel">(Enter channel's name separated by ',' separators)</label>
+      <hr>
       <br />
 
-      <p id="status">✅ <span data-i18n="options_loaded">Preferences loaded</span></p>
+      <p id="status"><span data-i18n="options_loaded">option loaded</span></p>
     </form>
     <script src="popup.js"></script>
   </body>

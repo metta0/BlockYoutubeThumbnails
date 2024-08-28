@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (items.exceptChannel) {
           exceptChannelTextarea.value = items.exceptChannel;
         }
-        statusElement.textContent = '✅ Preferences loaded';
+        statusElement.textContent = '✔️ Options loaded';
       });
     }
   
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         exceptCharacter: exceptCharacter,
         exceptChannel: exceptChannel
       }, function() {
-        statusElement.textContent = '✅ Preferences saved';
+        statusElement.textContent ='✔️ Options saved';
       });
     }
   
