@@ -39,6 +39,7 @@ function updateElem(){
     });
 }
 
+//이미 document.querySelectorAll('style[block-thumbnail-style="true"]') 이게 있을 경우 스타일 추가 안하는것으로 바꾸면 더 나을 것 같다.
 function hideThumbnail() {
     const style = document.createElement('style');
     //  .yt-core-image, #playlist-thumbnails, yt-avatar-shape, ytd-playlist-video-thumbnail-renderer , .html5-video-container
@@ -60,18 +61,17 @@ function showAllThumbnail() {
     });
 }
 
-//검색어로 예외처리된 썸네일들 다시 숨기기. -display속성
+//키워드로 예외처리된 썸네일들 다시 숨기기.
 function hideSpecificThumbnail(){
-    const thumbnails = document.querySelectorAll('[thumbnail-block="true"]');
-    console.log("del");
-    thumbnails.forEach(thumbnail => {
+    const exceptedThumbnails = document.querySelectorAll('[thumbnail-block="true"]');
+    exceptedThumbnails.forEach(thumbnail => {
         thumbnail.style.removeProperty('display');
         thumbnail.removeAttribute('thumbnail-block');
         console.log("deleted");
     });
 }
 
-//Hidden시 검색어로 예외처리된 썸네일들 다시 보이기
+//Hidden시 키워드로 예외처리된 썸네일들 다시 보이기
 function showSpecificThumbnail(keyword, option) {
     
     hideSpecificThumbnail();
