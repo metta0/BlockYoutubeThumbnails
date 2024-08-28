@@ -36,10 +36,17 @@ class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-paren
 querySelector 함수로 태그 하위의 태그를 찾는다. 하위 태그의 속성이나 id 값으로 찾기가능.(html이든,CSS든!)
 parentElement.querySelector('#text');
 
+```
 <style data-thumbnail-style="true">
   ytd-thumbnail, #playlist-thumbnails, yt-img-shadow {
     display: none !important;
   }
 </style>
+```
 document.querySelector('style[data-thumbnail-style="true"]'); 스타일 속성을 가지고 검색.
+
+```
+setInterval(() => {
+```
+setInterval 함수는 주어진 콜백 함수를 일정한 간격(밀리초 단위)으로 반복 실행합니다.
 
